@@ -12,14 +12,9 @@ public class LoginService
 {
 	public boolean validateUser(String userid, String password) 
 	{
-        // in28minutes, dummy
-		
-		
 		index();
-		
         return userid.equalsIgnoreCase("in28minutes") && password.equalsIgnoreCase("dummy");
 	}
-	
 	@Autowired  
     JdbcTemplate jdbc;    
     //@RequestMapping("/insert")  

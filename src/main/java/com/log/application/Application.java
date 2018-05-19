@@ -2,12 +2,12 @@
 package com.log.application;
 
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Profile;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 @SpringBootApplication
 @ComponentScan("com.log")
@@ -20,11 +20,9 @@ public class Application
 		ApplicationContext ctx = SpringApplication.run(Application.class, args);
 
 	}
-	@Profile("prod")
-	@Bean
-	public String dummy() 
-	{
-		return "something";
-	}
+	
+
+    @Autowired
+    JdbcTemplate jdbcTemplate;
 
 }

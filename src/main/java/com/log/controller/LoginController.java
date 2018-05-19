@@ -12,7 +12,6 @@ import com.log.service.LoginService;
 
 @Controller
 @SessionAttributes("name")
-
 public class LoginController
 {
 	@Autowired
@@ -24,6 +23,7 @@ public class LoginController
         return "login";
     }
     @RequestMapping(value="/login", method = RequestMethod.POST)
+    //public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password)
     public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password)
     {
         boolean isValidUser = service.validateUser(name, password);
