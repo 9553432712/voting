@@ -11,17 +11,24 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<start-class>com.log.application.SpringBootWebApplication</start-class>
 	</properties>
 
 	<dependencies>
-	
+		<dependency>
+		    <groupId>com.sun.mail</groupId>
+		    <artifactId>javax.mail</artifactId>
+		    <version>1.6.1</version>
+		</dependency>
 		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-starter-tomcat</artifactId>
+	        <scope>provided</scope>
 	    </dependency>
 	    <dependency>
 	        <groupId>org.apache.tomcat.embed</groupId>
 	        <artifactId>tomcat-embed-jasper</artifactId>
+	        <scope>provided</scope>
 	    </dependency>
 	    <dependency>
 	        <groupId>javax.servlet</groupId>
@@ -65,11 +72,11 @@
 			<artifactId>spring-data-rest-hal-browser</artifactId>
 		</dependency>
 		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.6</version>
-</dependency>
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>5.1.6</version>
+		</dependency>
 
 <!--  for connection pool-->
 
@@ -87,7 +94,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+                    <mainClass>com.log.application.SpringBootWebApplication</mainClass>
+                </configuration>
 			</plugin>
 		</plugins>
 	</build>
+	<packaging>war</packaging>
 </project>
