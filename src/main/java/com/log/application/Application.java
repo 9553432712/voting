@@ -19,12 +19,15 @@ public class Application
 
 	public static void main(String[] args) 
 	{
-		EMailService email = new EMailService();
-		email.sendMail();
-		//ApplicationContext ctx = SpringApplication.run(Application.class, args);
+		ApplicationContext ctx = SpringApplication.run(Application.class, args);
+
+		
 	}
     @Autowired
     JdbcTemplate jdbcTemplate;
+    
+    @Autowired 
+    EMailService emil;
 
 }
 

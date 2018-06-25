@@ -1,6 +1,8 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
 <html>
 <head>
-<title>First Web Application</title>
+<title>Anonymous Voting System </title>
 </head>
 <body>
     <font color="red">${errorMessage}</font>

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.log.service.LoginService;
+import com.log.util.EMailService;
 
 @Controller
 @SessionAttributes("name")
@@ -36,5 +37,23 @@ public class LoginController
         model.put("password", password);
         return "welcome";
     }
+    @RequestMapping(value="/mahesh", method = RequestMethod.GET)
+    //public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password)
+    public String showMaheshPage()//, @RequestParam String name, @RequestParam String password)
+    {
+    	EMailService email = new EMailService();
+		return "welcome";
+    }
+    
+    @RequestMapping(value="/getData", method = RequestMethod.GET)
+    //public String showWelcomePage(ModelMap model, @RequestParam String name, @RequestParam String password)
+    public String getUserData()//, @RequestParam String name, @RequestParam String password)
+    {
+    	EMailService email = new EMailService();
+		return "welcome";
+    }
+    
+    
+    
 
 }
