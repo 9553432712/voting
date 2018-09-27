@@ -82,6 +82,7 @@ public class VotingDAOImpl implements VotingDAO {
 		String text = jdbcTemplate.queryForObject(sql, inputs, String.class);
 		return text;
 	}
+	
 
 	
 }

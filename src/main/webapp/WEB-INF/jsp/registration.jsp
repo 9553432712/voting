@@ -196,52 +196,55 @@
 				if($('#student_id').val()==" " || $('#student_id').val().length==0 )
 				{
 					alert("Please enter student id");
+					$('#student_id').focus();
 					return false;
 				}
 				else if($('#first_name').val()==" " || $('#first_name').val().length==0 )
 				{
 					alert("Please enter First Name");
+					$('#first_name').focus();
 					return false;
 				}
 				else if($('#last_name').val()==" " || $('#last_name').val().length==0 )
 				{
 					alert("Please enter Last Name");
+					$('#last_name').focus();
 					return false;
 				}
 				else if($('#email').val()==" " || $('#email').val().length==0)
 				{
-					
 					alert("Please enter Email Id");
+					$('#email').focus();
 					return false;
 				}
 				else if($('#phone').val()==" " || $('#phone').val().length==0)
 				{
 					alert("Please enter Phone Number");
+					$('#phone').focus();
 					return false;
 				}
 				else if($('#stateId').val()=="-1" || $('#stateId').val().length==0 )
 				{
 					alert("Please select State");
-					return false;
-				}
-				else if($('#student_id').val()==" ")
-				{
-					alert("Please select Student id");
+					$('#stateId').focus();
 					return false;
 				}
 				else if( $('#districtId').val()=="-1" || $('#districtId').val().length==0 )
 				{
 					alert("Please select District");
+					$('#districtId').focus();
 					return false;
 				}
 				else if($('#cityId').val()=="-1" || $('#cityId').val().length==0 )
 				{
 					alert("Please select City");
+					$('#cityId').focus();
 					return false;
 				}
 				else if($('#collegeId').val()=="-1" || $('#collegeId').val().length==0 )
 				{
 					alert("Please select College");
+					$('#collegeId').focus();
 					return false;
 				}
 				else if(confirm("Are you sure you want to submit the request?"))
@@ -374,9 +377,6 @@
 		ArrayList collegeList       = new ArrayList();
 		String selCollege = "";
 		
-		System.out.println("0000000000000000000000------"+stateList);
-		
-		System.out.println("0000000000000000000000------"+request.getContextPath());
 	
 	%>
 </head>

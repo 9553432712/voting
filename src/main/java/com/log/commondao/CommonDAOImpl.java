@@ -89,7 +89,6 @@ public class CommonDAOImpl implements CommonDAO
 	}
 	public List getColleges(String stateId, String districtId, String cityId)
 	{
-		GetDataSource ds = new GetDataSource();
 		String sql = "SELECT college_id, college_name FROM college_master where state_id="+stateId+" and district_id="+districtId+" and city_id="+cityId;
 		List a = new ArrayList();
 		List<ArrayList> data = jdbc.query(sql, new RowMapper<ArrayList>(){

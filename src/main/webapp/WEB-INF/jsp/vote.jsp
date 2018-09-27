@@ -149,7 +149,8 @@
 		<link href='https://fonts.googleapis.com/css?family=Passion+One' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 
-
+	<%String successMsg = CommonUtility.checkNullObj(request.getAttribute("successMSG"));
+%>
 
 	
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -220,7 +221,7 @@
 			</div>
 		</nav>
 		
-		<div style="color:green;text-align:center;font-size:18px"><%CommonUtility.checkNullObj(request.getAttribute("successMSG")); %></div>
+		<div style="color:green;text-align:center;font-size:18px"><%=CommonUtility.checkNullObj(request.getAttribute("successMSG")) %></div>
 		<div class="container">
 			
 			<div class="row main">

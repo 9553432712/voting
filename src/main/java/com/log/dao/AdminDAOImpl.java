@@ -27,9 +27,7 @@ public class AdminDAOImpl implements AdminDAO{
 
 		GetDataSource ds = new GetDataSource();
 		System.out.println("99999999999999999999"+jdbcTemplate);
-		final String SELECT = "select SNo ,Student_Id , firstname ,lastname ,role_id , \n" + 
-				"email , phone ,state_id , district_id ,\n" + 
-				"city_id ,college_id ,is_final_year ,phn_verify , email_verify from user";		
+		final String SELECT = "select sno,Student_Id,firstname,lastname,role_name,email,phone,state_name,district_name,city_name,college_name,is_final_year from userinfo";		
 		List a = new ArrayList();
 		 
 		List<ArrayList> data = jdbcTemplate.query(SELECT, new RowMapper<ArrayList>(){

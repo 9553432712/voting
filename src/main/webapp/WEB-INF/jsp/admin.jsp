@@ -29,12 +29,12 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/../"><img src="<%=request.getContextPath()%>/images/quality1.jpg" width="100" height="100" class="img-responsive"></a>
+				<a href="<%=request.getContextPath()%>"><img src="<%=request.getContextPath()%>/images/quality1.jpg" width="100" height="100" class="img-responsive"></a>
 		
 				</div>
 				<div class="collapse navbar-collapse" id="myNavbar">
 					<ul class="nav navbar-nav navbar-right">
-						<li id="cd"><a href="/../"><i class="fa fa-user" id="icn" style="color: #fff;"></i><font color="#fff">Home</font></a></li>
+						<li id="cd"><a href="<%=request.getContextPath()%>"><i class="fa fa-user" id="icn" style="color: #fff;"></i><font color="#fff">Home</font></a></li>
 					</ul>
 				</div>
 			</div>
